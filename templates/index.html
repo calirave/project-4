@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Recommender</title>
+</head>
+<body>
+    <h1>Music Recommender</h1>
+
+    <form action="/recommend" method="post">
+        <label for="song_name">Enter a Christmas song name:</label>
+        <input type="text" name="song_name" required>
+        
+        <label for="danceability_category">Enter danceability category ('low', 'medium', 'high'):</label>
+        <input type="text" name="danceability_category" required>
+
+        <button type="submit">Get Recommendations</button>
+    </form>
+
+    <!-- {% if recommendations %}
+    <h2>Recommended songs for '{{ song_input }}' with {{ danceability_input }} danceability:</h2>
+    <ul>
+        {% for recommendation in recommendations %}
+        <li>{{ recommendation[0] }} by {{ recommendation[1] }} from {{ recommendation[2] }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %} -->
+
+</body>
+</html>
