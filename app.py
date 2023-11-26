@@ -1,11 +1,12 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, send_from_directory
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import linear_kernel
 import random
+import os
 
 app = Flask(__name__)
-    
+
 # Load the music CSV file
 file_path = "data/Holiday_Songs_Spotify.csv"  
 df = pd.read_csv(file_path)
@@ -66,6 +67,11 @@ def get_recommendations(song_input, danceability_category, cosine_sim=cosine_sim
 
     return recommendations[:15]  # Limit the final recommendations to 15
 
+# Route to provide data in JSON format
+@app.route('/api/data')
+def get_data_json():
+    return jsonify(df.to_dict(orient='records'))
+
 # Route for the home page
 @app.route('/')
 def home():
@@ -79,7 +85,7 @@ def recommend():
 
     recommendations = get_recommendations(song_input, danceability_input)
 
-    return render_template('index.html', song_input=song_input, danceability_input=danceability_input,recommendations = recommendations)
+    return render_template('index.html', song_input=song_input, danceability_input=danceability_input, recommendations=recommendations)
 
 if __name__ == '__main__':
     app.run(debug=True)

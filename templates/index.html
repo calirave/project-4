@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music Recommender</title>
+    <title>Christmas Music Recommender</title>
 </head>
 <body>
     <h1>Music Recommender</h1>
@@ -18,14 +18,14 @@
         <button type="submit">Get Recommendations</button>
     </form>
 
-    <!-- {% if recommendations %}
-    <h2>Recommended songs for '{{ song_input }}' with {{ danceability_input }} danceability:</h2>
+
+    <h2>Recommended songs:</h2>
     <ul>
-        {% for recommendation in recommendations %}
+        { for recommendation in recommendations }
         <li>{{ recommendation[0] }} by {{ recommendation[1] }} from {{ recommendation[2] }}</li>
-        {% endfor %}
+        { endfor }
     </ul>
-    {% endif %} -->
+    { endif }
 
 </body>
 </html>
