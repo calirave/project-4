@@ -8,3 +8,6 @@ https://data.world/promptcloud/spotify-musical-features-of-160-holiday-songs
 
 Google Slides Presentation
 https://docs.google.com/presentation/d/1UyTm1jNuzzRe5S9OLkbf_WrnYHaVvSWYx6HFAxeSKQs/edit?usp=sharing 
+
+Tableau Visualizations
+https://public.tableau.com/app/profile/whitney.briggs/viz/DanceabilityofChristmasSongsRankings/Dashboard1 
